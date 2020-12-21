@@ -5,4 +5,6 @@ module.exports = app => {
         .get(controller.listRegistroAluno)
         .post(controller.saveRegistroAluno)
 
+    app.route('/api/v1/registroAluno/:alunoId')
+        .delete(controller.removeRegistroAluno)
 }
