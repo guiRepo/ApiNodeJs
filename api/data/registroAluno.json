@@ -1,0 +1,9 @@
+{
+    "registroAluno" : {
+        "data" : [
+            { "id" : "1", "nome" : "Guilherme Andre de Melo", "telefone" : "92668647", "email" : "guilhermeanm95@hotmail.com"},
+            { "id" : "2", "nome" : "Felipe Alves de Jesus", "telefone" : "926690320", "email" : "felipealvesj95@hotmail.com"},
+            { "id" : "3", "nome" : "Keren Oliveira Amorin", "telefone" : "92558647", "email" : "kerenamorino95@hotmail.com"}
+        ]
+    }
+}

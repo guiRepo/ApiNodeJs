@@ -8,6 +8,12 @@ module.exports = () => {
     // Variaveis da Aplicação
     app.set('port', process.env.PORT || config.get('server.port'))
 
+    // Rotas
+    require('../api/routes/registroAluno')(app)
+
     // Middleware
     app.use(bodyParser.json())
-}
+
+    return app
+
+    }
