@@ -7,4 +7,6 @@ module.exports = app => {
 
     app.route('/api/v1/registroAluno/:alunoId')
         .delete(controller.removeRegistroAluno)
+        .put(controller.updateRegistroAluno)
+        
 }

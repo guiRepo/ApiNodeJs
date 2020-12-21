@@ -45,5 +45,35 @@ module.exports = app => {
         }
     }
 
+    controller.updateRegistroAluno = (req,res) => {
+        const {
+            alunoId,
+        } = req.params
+
+        const foundAlunoIndex = registroAlunoMock.data.findIndex(aluno => aluno.id === alunoId)
+
+        if(foundAlunoIndex === -1) {
+            res.status(404).json({
+                message: 'Aluno nao encontrado na base.',
+                success: false,
+                registroAluno: registroAlunoMock
+            })
+        } else {
+            const novoAluno = {
+                id: alunoId,
+                nome: req.body.nome,
+                telefone: req.body.telefone,
+                email: req.body.email
+            }
+
+            registroAlunoMock.data.splice(foundAlunoIndex, 1, novoAluno)
+
+            res.status(200).json({
+                message: 'Aluno encontrado e atualizado',
+                success: true,
+                registroAluno: registroAlunoMock
+            })
+        }
+    }
     return controller
 }
